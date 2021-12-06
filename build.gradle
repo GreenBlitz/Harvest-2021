@@ -73,6 +73,12 @@ test {
     useJUnitPlatform()
 }
 
+sourceSets {
+    sourceSets {
+        main.java.srcDirs = ['src/main/java']
+    }
+}
+
 wrapper{
     gradleVersion = '5.1.1'
 }
