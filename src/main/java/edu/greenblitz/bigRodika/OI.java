@@ -6,9 +6,11 @@ public class OI {
     private static OI instance;
 
     private SmartJoystick mainJoystick;
+    private SmartJoystick secondJoystick;
 
     private OI() {
         mainJoystick = new SmartJoystick(RobotMap.BigRodika.Joystick.MAIN);
+        secondJoystick = new SmartJoystick(RobotMap.BigRodika.Joystick.SECOND);
     }
 
     public static OI getInstance() {
@@ -20,5 +22,9 @@ public class OI {
 
     public SmartJoystick getMainJoystick() {
         return mainJoystick;
+    }
+
+    public SmartJoystick getSecondJoystick() {
+        return secondJoystick;
     }
 }
