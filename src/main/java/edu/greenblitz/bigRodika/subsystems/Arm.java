@@ -1,6 +1,7 @@
 package edu.greenblitz.bigRodika.subsystems;
 
 import edu.greenblitz.bigRodika.RobotMap;
+import edu.greenblitz.gblib.subsystems.GBSubsystem;
 import edu.wpi.first.wpilibj.PWMSparkMax;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
