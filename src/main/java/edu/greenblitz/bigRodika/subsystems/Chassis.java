@@ -6,11 +6,12 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.greenblitz.bigRodika.OI;
 import edu.greenblitz.bigRodika.RobotMap;
 import edu.greenblitz.bigRodika.commands.ArcadeDrive;
+import edu.greenblitz.gblib.subsystems.GBSubsystem;
 import edu.greenblitz.utils.SmartRobotDrive;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 
-public class Chassis implements Subsystem {
+public class Chassis extends GBSubsystem {
     private static Chassis instance;
 
     private VictorSPX leftVictor, rightVictor;
