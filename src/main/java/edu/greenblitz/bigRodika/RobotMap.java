@@ -25,5 +25,13 @@ public class RobotMap {
                 public static final boolean WRIST_REVERSED = false;  //TODO: not really the port
             }
         }
+
+        public static class Intake {
+            public static class Motors {
+                public static final int MOTOR_ONE = 5; //TODO: not actual port
+                public static final int MOTOR_TWO = 6; //TODO: not actual port
+                public static final boolean ROLLER_REVERSED = false; //TODO: might be reversed
+            }
+        }
     }
 }
