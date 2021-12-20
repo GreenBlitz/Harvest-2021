@@ -5,7 +5,9 @@ import edu.greenblitz.bigRodika.subsystems.Chassis;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
+import java.io.*;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Robot extends TimedRobot {
 
@@ -46,21 +48,40 @@ public class Robot extends TimedRobot {
             followDriverData.put((System.currentTimeMillis() / 1000.0) - startTime, OI.getInstance().getMainJoystick().getButtonsOn());
         }
     }
-    /* todo: finish function - make a csv string that represent the hashmap;
-    private <T, K> String HashMapToCsv(HashMap<T, K> myMap) {
-        String eol = System.getProperty("line.separator");
 
-        try (Writer writer = new FileWriter("somefile.csv")) {
-            for (Map.Entry<String, String> entry : myHashMap.entrySet()) {
-                writer.append(entry.getKey())
-                        .append(',')
-                        .append(entry.getValue())
-                        .append(eol);
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace(System.err);
+    //todo: make sure the all is good
+    private <T, K> void serializeHashMap(HashMap<T, K> myMap) {
+        try {
+            //when u run this code make sure to know the dest for the file.
+            FileOutputStream myFileOutStream = new FileOutputStream("/src/main/resources/saveHashmap.txt");
+            ObjectOutputStream myObjectOutStream = new ObjectOutputStream(myFileOutStream);
+            myObjectOutStream.writeObject(myMap);//should check that writeObject will work recursively (we deal with HashMap in HashMap)
+            //asaf said it will be find and it will work recursively
+            myObjectOutStream.close();
+            myFileOutStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }*/
+    }
+    //we copied those functions from gf"g, link:
+    //https://www.geeksforgeeks.org/how-to-serialize-hashmap-in-java/
+    private HashMap deserializeHashMap(String fileName) {
+        try {
+            FileInputStream fileInput = new FileInputStream("/src/main/resources/".concat(fileName).concat("txt"));
+            ObjectInputStream objectInput = new ObjectInputStream(fileInput);
+            HashMap myMap = (HashMap) objectInput.readObject();
+            objectInput.close();
+            fileInput.close();
+            return myMap;
+        } catch (IOException obj1) {
+            obj1.printStackTrace();
+            return null;
+        } catch (ClassNotFoundException obj2) {
+            System.out.println("Class not found");
+            obj2.printStackTrace();
+            return null;
+        }
+    }
 
 
 }
