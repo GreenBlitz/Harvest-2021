@@ -1,7 +1,7 @@
-package edu.greenblitz.bigRodika;
+package edu.greenblitz.thanos;
 
-import edu.greenblitz.bigRodika.commands.ArcadeDrive;
-import edu.greenblitz.bigRodika.subsystems.Chassis;
+import edu.greenblitz.thanos.commands.ArcadeDrive;
+import edu.greenblitz.thanos.subsystems.Chassis;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 

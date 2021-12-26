@@ -1,4 +1,4 @@
-package edu.greenblitz.bigRodika;
+package edu.greenblitz.thanos;
 
 import edu.wpi.first.wpilibj.RobotBase;
 

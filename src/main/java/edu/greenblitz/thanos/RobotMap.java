@@ -1,4 +1,4 @@
-package edu.greenblitz.bigRodika;
+package edu.greenblitz.thanos;
 
 public class RobotMap {
 

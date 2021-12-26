@@ -1,11 +1,10 @@
-package edu.greenblitz.bigRodika.subsystems;
+package edu.greenblitz.thanos.subsystems;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
-import edu.greenblitz.bigRodika.OI;
-import edu.greenblitz.bigRodika.RobotMap;
-import edu.greenblitz.bigRodika.commands.ArcadeDrive;
+import edu.greenblitz.thanos.OI;
+import edu.greenblitz.thanos.RobotMap;
+import edu.greenblitz.thanos.commands.ArcadeDrive;
 import edu.greenblitz.utils.SmartRobotDrive;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Subsystem;

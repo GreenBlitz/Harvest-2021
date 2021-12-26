@@ -1,6 +1,6 @@
-package edu.greenblitz.bigRodika.commands;
+package edu.greenblitz.thanos.commands;
 
-import edu.greenblitz.bigRodika.subsystems.Chassis;
+import edu.greenblitz.thanos.subsystems.Chassis;
 import edu.greenblitz.gblib.command.GBCommand;
 import edu.greenblitz.gblib.hid.SmartJoystick;
 
